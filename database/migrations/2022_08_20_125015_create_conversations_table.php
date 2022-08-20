@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('sender_id')->constrained('users');
             $table->foreignId('recevier_id')->constrained('users');
+            $table->dateTime('last_message');
             $table->timestamps();
         });
     }
