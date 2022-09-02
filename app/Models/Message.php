@@ -11,11 +11,8 @@ class Message extends Model
     use HasFactory;
     protected $fillable = [
         'conversation_id',
-        'sender_id',
-        'recevier_id',
         'body',
         'read',
-        'type',
     ];
     /**
      * Get the conversation that owns the Message
@@ -25,15 +22,5 @@ class Message extends Model
     public function conversation(): BelongsTo
     {
         return $this->belongsTo(Conversation::class);
-    }
-
-    /**
-     * Get the user that owns the Message
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'sender_id');
     }
 }
