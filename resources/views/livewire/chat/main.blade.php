@@ -4,7 +4,7 @@
             {{ __('Main') }}
         </h2>
     </x-slot>
-
+    <p class="test">test</p>
     <div class="chat_container">
         <div class="chat_list_container">
             @livewire('chat.chat-list')

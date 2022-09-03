@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Chat\Main;
 use Illuminate\Support\Facades\Route;
 
 /*
